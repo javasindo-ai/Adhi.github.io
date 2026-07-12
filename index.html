@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV. JAVAS INDONESIA KONSULTAN - Solusi Profesional untuk Lingkungan yang Berkelanjutan">
+    <meta name="keywords" content="konsultasi lingkungan, sustainability, environmental consultant, keberlanjutan bisnis">
+    <meta name="author" content="CV. JAVAS INDONESIA KONSULTAN">
+    <meta property="og:title" content="CV. JAVAS INDONESIA KONSULTAN">
+    <meta property="og:description" content="Solusi Profesional untuk Lingkungan yang Berkelanjutan">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://javasindo-ai.github.io">
+    <meta name="theme-color" content="#1B5E20">
+    <link rel="canonical" href="https://javasindo-ai.github.io/">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>JAVAS KONSULTAN - Solusi Lingkungan Berkelanjutan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            display: flex;
+            align-items: center;
+            padding: 80px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(27, 94, 32, 0.05);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            color: #1B5E20;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #757575;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-illustration {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 100px;
+            opacity: 0.9;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .scroll-indicator i {
+            font-size: 24px;
+            color: #1B5E20;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 60px 16px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-illustration {
+                height: 300px;
+                font-size: 60px;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #1B5E20 0%, #2D6A4F 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .stat-item {
+                padding: 24px;
+            }
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin: 0 auto 16px;
+        }
+
+        .benefit-card h4 {
+            color: #212121;
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: #757575;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            border-color: #4CAF50;
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: #F1F8F4;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1B5E20;
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .service-card h4 {
+            color: #212121;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #757575;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .service-link {
+            color: #1B5E20;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Testimonials */
+        .swiper-container {
+            width: 100%;
+            padding-bottom: 60px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 32px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stars {
+            color: #FFB800;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            color: #757575;
+            font-size: 14px;
+            line-height: 1.8;
+            flex-grow: 1;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .author-info h5 {
+            color: #212121;
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: #757575;
+            font-size: 12px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1B5E20 0%, #4CAF50 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 24px;
+            border-radius: 20px;
+            margin: 64px auto;
+            max-width: 800px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: #1B5E20;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn-white:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: #1B5E20;
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 48px 24px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-white, .btn-outline {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/" class="active">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1>Solusi Profesional untuk Lingkungan yang Berkelanjutan</h1>
+                <p>Kami menyediakan konsultasi lingkungan terpadu untuk membantu bisnis Anda mencapai target keberlanjutan dan compliance regulasi dengan efisien.</p>
+                <div class="hero-buttons">
+                    <a href="/contact.html" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">Mulai Konsultasi</a>
+                    <a href="/about.html" class="btn btn-secondary btn-lg" data-aos="fade-up" data-aos-delay="300">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+            <div class="hero-illustration" data-aos="fade-left" data-aos-duration="1000">
+                <i class="fas fa-tree"></i>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Memilih Kami?</h2>
+                <div class="divider"></div>
+                <p>Kami adalah partner terpercaya dengan track record proven dalam membantu ratusan perusahaan mencapai target keberlanjutan mereka</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Tim Profesional</h4>
+                    <p>Tim berpengalaman dengan sertifikasi internasional di bidang lingkungan dan keberlanjutan</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>Track Record Terbukti</h4>
+                    <p>150+ proyek sukses dengan ROI rata-rata 35% dalam 2 tahun implementasi</p>
+                </div>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4>Solusi Customized</h4>
+                    <p>Strategi disesuaikan dengan kebutuhan spesifik industri dan kondisi operasional Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-number" data-target="150">150</div>
+                    <div class="stat-label">Proyek Selesai</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-target="50">50</div>
+                    <div class="stat-label">Klien Puas</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-target="25">25</div>
+                    <div class="stat-label">Industri Terlayani</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Kepuasan Klien</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Unggulan</h2>
+                <div class="divider"></div>
+                <p>Kami menyediakan solusi komprehensif untuk semua kebutuhan konsultasi lingkungan bisnis Anda</p>
+            </div>
+            <div class="services-grid" id="servicesContainer">
+                <!-- Services will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apa Kata Klien Kami</h2>
+                <div class="divider"></div>
+                <p>Pengalaman nyata dari klien-klien kami yang puas dengan hasil dan layanan kami</p>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="testimonialsContainer">
+                    <!-- Testimonials will be loaded here -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container">
+        <div class="cta-section" data-aos="zoom-in">
+            <h2>Siap Mulai Perjalanan Keberlanjutan Anda?</h2>
+            <p>Hubungi tim kami hari ini untuk konsultasi gratis dan temukan solusi terbaik untuk bisnis Anda.</p>
+            <div class="cta-buttons">
+                <a href="/contact.html" class="btn-white">Hubungi Kami</a>
+                <a href="tel:+62XXXXXXXXXX" class="btn-outline">+62 XXX XXXX XXXX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html#audit">Audit Lingkungan</a></li>
+                    <li><a href="/services.html#compliance">Compliance Management</a></li>
+                    <li><a href="/services.html#strategy">Environmental Strategy</a></li>
+                    <li><a href="/services.html#implementation">System Implementation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/form-handler.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Services
+        fetch('/assets/data/services.json')
+            .then(response => response.json())
+            .then(services => {
+                const container = document.getElementById('servicesContainer');
+                container.innerHTML = services.map((service, index) => `
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="service-icon">
+                            <i class="fas fa-${service.icon}"></i>
+                        </div>
+                        <h4>${service.title}</h4>
+                        <p>${service.description}</p>
+                        <a href="/services.html#${service.id}" class="service-link">
+                            Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                `).join('');
+                AOS.refresh();
+            });
+
+        // Load Testimonials
+        fetch('/assets/data/testimonials.json')
+            .then(response => response.json())
+            .then(testimonials => {
+                const container = document.getElementById('testimonialsContainer');
+                container.innerHTML = testimonials.map(testimonial => `
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">${'⭐'.repeat(testimonial.rating)}</div>
+                            <p class="testimonial-text">"${testimonial.text}"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">${testimonial.author.charAt(0)}</div>
+                                <div class="author-info">
+                                    <h5>${testimonial.author}</h5>
+                                    <p>${testimonial.title}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                // Initialize Swiper
+                new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev'
+                    },
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 16
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
