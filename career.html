@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karir di JAVAS KONSULTAN - Bergabunglah dengan Tim Kami">
+    <meta name="keywords" content="karir, lowongan kerja, job opportunities, join us">
+    <meta property="og:title" content="Karir - JAVAS KONSULTAN">
+    <meta property="og:description" content="Jelajahi peluang karir di CV. JAVAS INDONESIA KONSULTAN">
+    <link rel="canonical" href="https://javasindo-ai.github.io/career.html">
+    <title>Karir - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Why Join */
+        .why-join {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 64px;
+        }
+
+        .why-join-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-join-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .why-join-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin: 0 auto 16px;
+        }
+
+        .why-join-card h4 {
+            color: #212121;
+            margin-bottom: 12px;
+        }
+
+        .why-join-card p {
+            color: #757575;
+            font-size: 13px;
+        }
+
+        /* Job Listings */
+        .job-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .job-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-color: #4CAF50;
+        }
+
+        .job-info {
+            flex: 1;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .job-icon {
+            width: 48px;
+            height: 48px;
+            background: #F1F8F4;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1B5E20;
+            font-size: 24px;
+        }
+
+        .job-title {
+            color: #212121;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #757575;
+            font-size: 13px;
+        }
+
+        .job-meta-item i {
+            color: #4CAF50;
+        }
+
+        .job-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-apply {
+            background: #1B5E20;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-apply:hover {
+            background: #164620;
+        }
+
+        .btn-details {
+            background: transparent;
+            color: #1B5E20;
+            border: 2px solid #1B5E20;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-details:hover {
+            background: #1B5E20;
+            color: white;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #757575;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #1B5E20;
+        }
+
+        .modal-section {
+            margin-bottom: 24px;
+        }
+
+        .modal-section h4 {
+            color: #1B5E20;
+            margin-bottom: 12px;
+        }
+
+        .modal-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-section li {
+            color: #757575;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .modal-section li:before {
+            content: '✓';
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Culture */
+        .culture-section {
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            padding: 64px 24px;
+            border-radius: 20px;
+            margin-bottom: 64px;
+            text-align: center;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .culture-item {
+            text-align: left;
+        }
+
+        .culture-item h4 {
+            color: #1B5E20;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .culture-item p {
+            color: #757575;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 1024px) {
+            .why-join {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .culture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .job-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-join,
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 16px;
+            }
+
+            .job-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .btn-apply, .btn-details {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html" class="active">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Karir</span>
+            </div>
+            <h1>Bergabunglah dengan Tim Kami</h1>
+            <p>Kami mencari talenta terbaik yang passionate tentang keberlanjutan dan lingkungan untuk bergabung dengan tim profesional kami</p>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mengapa Bergabung dengan JAVAS?</h2>
+                <div class="divider"></div>
+                <p>Kami menawarkan lingkungan kerja yang mendukung pertumbuhan dan pengembangan profesional Anda</p>
+            </div>
+            <div class="why-join">
+                <div class="why-join-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="why-join-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Pertumbuhan Karir</h4>
+                    <p>Kesempatan untuk berkembang dalam lingkungan yang dinamis dan mendukung</p>
+                </div>
+                <div class="why-join-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-join-icon"><i class="fas fa-users"></i></div>
+                    <h4>Tim Profesional</h4>
+                    <p>Bekerja dengan expert dari berbagai latar belakang dan industri</p>
+                </div>
+                <div class="why-join-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-join-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Dampak Positif</h4>
+                    <p>Kontribusi langsung pada keberlanjutan lingkungan dan bisnis yang lebih baik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="culture-section">
+        <div class="container">
+            <h2 style="color: #1B5E20;">Budaya Perusahaan Kami</h2>
+            <p style="color: #757575; max-width: 600px; margin: 12px auto 0;">Kami membangun budaya kerja yang inklusif, inovatif, dan berorientasi pada hasil</p>
+            <div class="culture-grid">
+                <div class="culture-item">
+                    <h4><i class="fas fa-lightbulb"></i> Inovasi</h4>
+                    <p>Kami mendorong ide-ide kreatif dan eksperimen untuk menemukan solusi terbaik</p>
+                </div>
+                <div class="culture-item">
+                    <h4><i class="fas fa-handshake"></i> Kolaborasi</h4>
+                    <p>Tim yang solid dengan komunikasi terbuka dan saling mendukung</p>
+                </div>
+                <div class="culture-item">
+                    <h4><i class="fas fa-award"></i> Excellence</h4>
+                    <p>Komitmen pada kualitas tinggi dalam setiap aspek pekerjaan kami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lowongan Terbuka</h2>
+                <div class="divider"></div>
+                <p>Posisi yang tersedia saat ini di berbagai departemen</p>
+            </div>
+            <div id="careersContainer">
+                <!-- Job listings will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html">Semua Layanan</a></li>
+                    <li><a href="/services.html">Compliance Management</a></li>
+                    <li><a href="/services.html">Environmental Strategy</a></li>
+                    <li><a href="/services.html">Training & Awareness</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Careers
+        fetch('/assets/data/careers.json')
+            .then(response => response.json())
+            .then(careers => {
+                const container = document.getElementById('careersContainer');
+                container.innerHTML = careers.map((job, index) => `
+                    <div class="job-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="job-info">
+                            <div class="job-header">
+                                <div class="job-icon"><i class="fas fa-briefcase"></i></div>
+                                <h3 class="job-title">${job.title}</h3>
+                            </div>
+                            <div class="job-meta">
+                                <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
+                                <span class="job-meta-item"><i class="fas fa-layer-group"></i> ${job.level}</span>
+                                <span class="job-meta-item"><i class="fas fa-clock"></i> ${job.type}</span>
+                                <span class="job-meta-item"><i class="fas fa-sitemap"></i> ${job.department}</span>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="btn-details" onclick="openJobModal(${job.id})">Detail</button>
+                            <a href="/contact.html" class="btn-apply">Lamar Sekarang</a>
+                        </div>
+                    </div>
+                `).join('');
+                window.allCareers = careers;
+                AOS.refresh();
+            });
+
+        function openJobModal(jobId) {
+            const job = window.allCareers.find(j => j.id === jobId);
+            if (!job) return;
+
+            const html = `
+                <div class="modal active" onclick="if(event.target===this) closeJobModal()">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeJobModal()"><i class="fas fa-times"></i></button>
+                        <h2 style="color: #1B5E20; margin-bottom: 8px;">${job.title}</h2>
+                        <p style="color: #757575; margin-bottom: 24px;">${job.department} • ${job.location}</p>
+                        
+                        <div class="modal-section">
+                            <h4>Deskripsi Posisi</h4>
+                            <p style="color: #757575;">${job.description}</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4>Tanggung Jawab</h4>
+                            <ul>
+                                ${job.responsibilities.map(r => `<li>${r}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4>Persyaratan</h4>
+                            <ul>
+                                ${job.requirements.map(r => `<li>${r}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h4>Benefit & Fasilitas</h4>
+                            <ul>
+                                ${job.benefits.map(b => `<li>${b}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <a href="/contact.html" style="display: inline-block; background: #1B5E20; color: white; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; margin-top: 24px;">Lamar Posisi Ini</a>
+                    </div>
+                </div>
+            `;
+
+            document.body.insertAdjacentHTML('beforeend', html);
+        }
+
+        function closeJobModal() {
+            const modal = document.querySelector('.modal');
+            if (modal) modal.remove();
+        }
+    </script>
+</body>
+</html>
