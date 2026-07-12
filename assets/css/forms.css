@@ -1,0 +1,125 @@
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #EEEEEE;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #1B5E20;
+    box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.success-message {
+    background: #4CAF50;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Link Styles */
+a {
+    color: #1B5E20;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4CAF50;
+}
+
+/* Focus Visible */
+*:focus-visible {
+    outline: 2px solid #1B5E20;
+    outline-offset: 2px;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: #212121;
+    }
+
+    a {
+        color: #1B5E20;
+        text-decoration: underline;
+    }
+}
