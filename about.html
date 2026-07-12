@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tentang CV. JAVAS INDONESIA KONSULTAN - Tim dan Visi Kami">
+    <meta name="keywords" content="about us, tim konsultan, visi misi, company profile">
+    <meta property="og:title" content="Tentang Kami - JAVAS KONSULTAN">
+    <meta property="og:description" content="Pelajari lebih lanjut tentang CV. JAVAS INDONESIA KONSULTAN">
+    <link rel="canonical" href="https://javasindo-ai.github.io/about.html">
+    <title>Tentang Kami - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 64px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            color: white;
+        }
+
+        .about-text h2 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .about-text p {
+            color: #757575;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .value-item {
+            padding: 20px;
+            background: #F1F8F4;
+            border-radius: 12px;
+        }
+
+        .value-item h4 {
+            color: #1B5E20;
+            margin-bottom: 8px;
+        }
+
+        .value-item p {
+            font-size: 13px;
+            color: #757575;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .team-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+        }
+
+        .team-info {
+            padding: 20px;
+        }
+
+        .team-info h4 {
+            color: #212121;
+            margin-bottom: 4px;
+        }
+
+        .team-position {
+            color: #1B5E20;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .team-bio {
+            color: #757575;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .team-specialty {
+            color: #4CAF50;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        /* Mission Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 64px;
+        }
+
+        .mission-box, .vision-box {
+            padding: 40px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #1B5E20 0%, #2D6A4F 100%);
+        }
+
+        .vision-box {
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+        }
+
+        .mission-box h3, .vision-box h3 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .mission-box p, .vision-box p {
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Certifications */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            background: #F5F5F5;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .cert-item {
+            text-align: center;
+        }
+
+        .cert-icon {
+            font-size: 48px;
+            color: #1B5E20;
+            margin-bottom: 12px;
+        }
+
+        .cert-item h4 {
+            color: #212121;
+            margin-bottom: 8px;
+        }
+
+        .cert-item p {
+            color: #757575;
+            font-size: 13px;
+        }
+
+        @media (max-width: 1024px) {
+            .about-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid,
+            .values,
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html" class="active">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Tentang Kami</span>
+            </div>
+            <h1>Tentang CV. JAVAS INDONESIA KONSULTAN</h1>
+            <p>Kami adalah mitra terpercaya dalam perjalanan transformasi lingkungan bisnis Anda menuju keberlanjutan yang nyata.</p>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="section">
+        <div class="container">
+            <div class="about-intro">
+                <div class="about-image" data-aos="fade-right">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h2>Tentang Perusahaan</h2>
+                    <p>CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan dan keberlanjutan terkemuka di Indonesia yang didirikan pada tahun 2010. Kami berkomitmen untuk membantu perusahaan dari berbagai industri mencapai target keberlanjutan mereka sambil meningkatkan efisiensi operasional.</p>
+                    <p>Dengan pengalaman lebih dari 14 tahun, kami telah membantu lebih dari 150 proyek di berbagai sektor termasuk pertambangan, manufaktur, energi, dan pertanian.</p>
+                    
+                    <div class="values">
+                        <div class="value-item">
+                            <h4><i class="fas fa-lightbulb"></i> Inovasi</h4>
+                            <p>Solusi inovatif yang disesuaikan dengan kebutuhan unik setiap klien</p>
+                        </div>
+                        <div class="value-item">
+                            <h4><i class="fas fa-handshake"></i> Integritas</h4>
+                            <p>Komitmen penuh terhadap transparansi dan etika bisnis</p>
+                        </div>
+                        <div class="value-item">
+                            <h4><i class="fas fa-chart-line"></i> Hasil</h4>
+                            <p>Fokus pada hasil terukur dan ROI yang jelas untuk setiap proyek</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section">
+        <div class="container">
+            <div class="mission-vision">
+                <div class="mission-box" data-aos="fade-up">
+                    <h3><i class="fas fa-bullseye"></i> Misi Kami</h3>
+                    <p>Menyediakan solusi konsultasi lingkungan yang komprehensif dan inovatif untuk membantu bisnis mencapai target keberlanjutan sambil meningkatkan nilai stakeholder dan menciptakan dampak positif bagi lingkungan.</p>
+                </div>
+                <div class="vision-box" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-eye"></i> Visi Kami</h3>
+                    <p>Menjadi konsultan lingkungan pilihan utama di Asia Tenggara yang dikenal karena keunggulan, inovasi, dan komitmen terhadap keberlanjutan bisnis yang berkelanjutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tim Kami</h2>
+                <div class="divider"></div>
+                <p>Tim profesional berpengalaman dengan sertifikasi internasional di bidang lingkungan dan keberlanjutan</p>
+            </div>
+            <div class="team-grid" id="teamContainer">
+                <!-- Team members will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sertifikasi & Penghargaan</h2>
+                <div class="divider"></div>
+                <p>Kami memiliki sertifikasi internasional dan penghargaan yang membuktikan komitmen kami terhadap keunggulan</p>
+            </div>
+            <div class="certifications">
+                <div class="cert-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h4>ISO 14001:2015</h4>
+                    <p>Certified Environmental Management System</p>
+                </div>
+                <div class="cert-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon"><i class="fas fa-award"></i></div>
+                    <h4>GRI Standards</h4>
+                    <p>Global Reporting Initiative Certified</p>
+                </div>
+                <div class="cert-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon"><i class="fas fa-star"></i></div>
+                    <h4>Best Practices</h4>
+                    <p>Industry Leader Award 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html">Semua Layanan</a></li>
+                    <li><a href="/services.html">Compliance Management</a></li>
+                    <li><a href="/services.html">Environmental Strategy</a></li>
+                    <li><a href="/services.html">Training & Awareness</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Team Members
+        fetch('/assets/data/team.json')
+            .then(response => response.json())
+            .then(teamMembers => {
+                const container = document.getElementById('teamContainer');
+                container.innerHTML = teamMembers.map((member, index) => `
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="team-image">${member.name.split(' ').map(n => n[0]).join('')}</div>
+                        <div class="team-info">
+                            <h4>${member.name}</h4>
+                            <div class="team-position">${member.position}</div>
+                            <p class="team-bio">${member.bio}</p>
+                            <p class="team-specialty">${member.specialization}</p>
+                        </div>
+                    </div>
+                `).join('');
+                AOS.refresh();
+            });
+    </script>
+</body>
+</html>
