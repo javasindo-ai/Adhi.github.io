@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Budi Santoso",
+    "position": "Founder & CEO",
+    "department": "Leadership",
+    "image": "/assets/images/team/ceo.jpg",
+    "bio": "20+ tahun pengalaman dalam konsultasi lingkungan dan keberlanjutan korporat",
+    "specialization": "Environmental Strategy, Corporate Sustainability"
+  },
+  {
+    "id": 2,
+    "name": "Siti Nurhaliza",
+    "position": "Director of Operations",
+    "department": "Operations",
+    "image": "/assets/images/team/director-ops.jpg",
+    "bio": "15+ tahun pengalaman dalam operasi manajemen lingkungan dan ISO compliance",
+    "specialization": "ISO 14001, Compliance Management"
+  },
+  {
+    "id": 3,
+    "name": "Ahmad Rahman",
+    "position": "Senior Consultant",
+    "department": "Consulting",
+    "image": "/assets/images/team/consultant-1.jpg",
+    "bio": "12+ tahun pengalaman di sektor pertambangan dan manufaktur",
+    "specialization": "Carbon Footprint, Energy Efficiency"
+  },
+  {
+    "id": 4,
+    "name": "Eka Putri",
+    "position": "Sustainability Analyst",
+    "department": "Consulting",
+    "image": "/assets/images/team/analyst-1.jpg",
+    "bio": "8+ tahun pengalaman dalam data analytics dan sustainability reporting",
+    "specialization": "Data Analytics, Sustainability Reporting"
+  }
+]

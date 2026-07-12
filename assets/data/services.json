@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Audit Lingkungan",
+    "description": "Evaluasi komprehensif dampak lingkungan dari operasional bisnis Anda",
+    "icon": "clipboard-check",
+    "details": "Kami melakukan audit menyeluruh untuk mengidentifikasi risiko lingkungan dan peluang peningkatan dalam operasi Anda.",
+    "benefits": [
+      "Identifikasi risiko lingkungan",
+      "Rekomendasi perbaikan",
+      "Laporan komprehensif",
+      "Action plan terukur"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Compliance Management",
+    "description": "Memastikan bisnis Anda mematuhi standar dan regulasi lingkungan",
+    "icon": "scale",
+    "details": "Kami membantu perusahaan Anda tetap compliant dengan peraturan lingkungan yang terus berkembang.",
+    "benefits": [
+      "Pemahaman regulasi terkini",
+      "Strategi compliance",
+      "Dokumentasi lengkap",
+      "Audit internal berkala"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Environmental Strategy",
+    "description": "Merancang strategi keberlanjutan jangka panjang untuk perusahaan Anda",
+    "icon": "target",
+    "details": "Kami membantu mengembangkan strategi lingkungan yang selaras dengan visi bisnis Anda.",
+    "benefits": [
+      "Goal setting berkelanjutan",
+      "Roadmap implementasi",
+      "KPI monitoring",
+      "Reporting berkelanjutan"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "System Implementation",
+    "description": "Implementasi sistem manajemen lingkungan yang efektif dan efisien",
+    "icon": "gear",
+    "details": "Kami membantu mengimplementasikan sistem ISO 14001 dan standar lingkungan lainnya.",
+    "benefits": [
+      "Sertifikasi ISO 14001",
+      "Standard operational procedures",
+      "Training komprehensif",
+      "Support berkelanjutan"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Training & Awareness",
+    "description": "Program pelatihan kesadaran lingkungan untuk karyawan Anda",
+    "icon": "book-open",
+    "details": "Kami menyediakan program pelatihan untuk meningkatkan kesadaran lingkungan di seluruh organisasi.",
+    "benefits": [
+      "Program customized",
+      "Trainer berpengalaman",
+      "Workshop interaktif",
+      "Materi pembelajaran lengkap"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Monitoring & Reporting",
+    "description": "Monitoring berkelanjutan dan pelaporan kinerja lingkungan",
+    "icon": "bar-chart-2",
+    "details": "Kami menyediakan sistem monitoring dan pelaporan untuk melacak kinerja lingkungan Anda.",
+    "benefits": [
+      "Dashboard real-time",
+      "Laporan berkala",
+      "Data analytics",
+      "Sustainability reporting"
+    ]
+  }
+]

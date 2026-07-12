@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Environmental Consultant",
+    "department": "Consulting",
+    "location": "Jakarta",
+    "level": "Senior",
+    "type": "Full-time",
+    "description": "Kami mencari Senior Environmental Consultant dengan pengalaman minimal 10 tahun di bidang konsultasi lingkungan.",
+    "responsibilities": [
+      "Memimpin project konsultasi lingkungan berskala besar",
+      "Mengembangkan strategi keberlanjutan untuk klien korporat",
+      "Mengelola tim junior consultant",
+      "Presentasi kepada klien dan stakeholder"
+    ],
+    "requirements": [
+      "Minimal 10 tahun pengalaman di bidang environmental consulting",
+      "Sertifikasi ISO 14001 atau sejenisnya",
+      "Kemampuan bahasa Inggris yang baik",
+      "Kepemimpinan tim yang kuat"
+    ],
+    "benefits": [
+      "Gaji kompetitif",
+      "Bonus tahunan",
+      "Health insurance",
+      "Flexible working hours"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Environmental Analyst",
+    "department": "Consulting",
+    "location": "Jakarta",
+    "level": "Mid-level",
+    "type": "Full-time",
+    "description": "Environmental Analyst untuk mendukung project-project konsultasi lingkungan kami.",
+    "responsibilities": [
+      "Melakukan audit lingkungan dan data collection",
+      "Analisis data dan pembuatan laporan",
+      "Koordinasi dengan klien",
+      "Pendukung implementasi program"
+    ],
+    "requirements": [
+      "S1 Teknik Lingkungan atau bidang terkait",
+      "Minimal 3 tahun pengalaman",
+      "Kemampuan analytical yang baik",
+      "Profisiensi MS Excel dan data analysis tools"
+    ],
+    "benefits": [
+      "Gaji kompetitif",
+      "Bonus bulanan",
+      "Health insurance",
+      "Training & development"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Sustainability Reporting Specialist",
+    "department": "Reporting",
+    "location": "Jakarta",
+    "level": "Mid-level",
+    "type": "Full-time",
+    "description": "Specialist dalam sustainability reporting dan GRI standards.",
+    "responsibilities": [
+      "Menyusun sustainability reports sesuai standar GRI",
+      "Koordinasi data collection dari berbagai departemen klien",
+      "Quality assurance laporan sustainability",
+      "Konsultasi dengan klien tentang reporting standards"
+    ],
+    "requirements": [
+      "S1 Accounting, Business, atau Environmental Science",
+      "Minimal 2 tahun pengalaman di sustainability reporting",
+      "Pemahaman GRI Standards",
+      "Excellent written communication"
+    ],
+    "benefits": [
+      "Gaji kompetitif",
+      "Bonus bulanan",
+      "Health insurance",
+      "Professional certification support"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Junior Environmental Consultant",
+    "department": "Consulting",
+    "location": "Jakarta",
+    "level": "Entry-level",
+    "type": "Full-time",
+    "description": "Fresh graduate atau recently graduated untuk bergabung dengan tim konsultan kami.",
+    "responsibilities": [
+      "Mendukung audit lingkungan dan data collection",
+      "Asisten dalam penyusunan laporan",
+      "Pembelajaran mendalam tentang environmental consulting",
+      "Koordinasi administratif project"
+    ],
+    "requirements": [
+      "S1 Teknik Lingkungan, Environmental Science, atau sejenisnya",
+      "Fresh graduate atau kurang dari 2 tahun pengalaman",
+      "Kemampuan komunikasi yang baik",
+      "Motivasi untuk belajar dan berkembang"
+    ],
+    "benefits": [
+      "Gaji kompetitif untuk fresh graduate",
+      "Komprehensif training program",
+      "Health insurance",
+      "Mentorship dari senior consultant"
+    ]
+  }
+]

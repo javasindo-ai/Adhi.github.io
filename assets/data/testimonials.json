@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "author": "Budi Santoso",
+    "title": "Direktur Utama PT XYZ Mining",
+    "company": "PT XYZ Mining",
+    "rating": 5,
+    "text": "Layanan JAVAS sangat membantu kami mencapai target carbon neutral dalam 2 tahun. Tim mereka sangat responsif dan berpengalaman. Rekomendasi 100%!",
+    "image": "/assets/images/testimonials/avatar-1.jpg"
+  },
+  {
+    "id": 2,
+    "author": "Ibu Nursa",
+    "title": "CEO PT ABC Indonesia",
+    "company": "PT ABC Indonesia",
+    "rating": 5,
+    "text": "Tim profesional, hasil melampaui ekspektasi kami. Program manajemen limbah mereka menghemat biaya operasional kami hingga 30%.",
+    "image": "/assets/images/testimonials/avatar-2.jpg"
+  },
+  {
+    "id": 3,
+    "author": "Reza Wijaya",
+    "title": "Direktur Operasional PT Energi Nusantara",
+    "company": "PT Energi Nusantara",
+    "rating": 5,
+    "text": "Konsultasi energi efisiensi dari JAVAS menghasilkan ROI yang mengesankan. Sangat merekomendasikan untuk partner bisnis lain.",
+    "image": "/assets/images/testimonials/avatar-3.jpg"
+  },
+  {
+    "id": 4,
+    "author": "Dewi Lestari",
+    "title": "Sustainability Manager PT Perkebunan Sejahtera",
+    "company": "PT Perkebunan Sejahtera",
+    "rating": 5,
+    "text": "JAVAS membantu kami mencapai sertifikasi sustainability yang diperlukan pasar internasional. Proses yang terstruktur dan tim yang supportive.",
+    "image": "/assets/images/testimonials/avatar-4.jpg"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Carbon Emission Reduction - Mining Sector",
+    "category": "Mining",
+    "image": "/assets/images/portfolio/mining-project.jpg",
+    "description": "Strategi pengurangan emisi karbon komprehensif untuk operasi pertambangan skala besar",
+    "challenge": "Perusahaan pertambangan menghadapi tekanan regulasi untuk mengurangi emisi karbon sambil mempertahankan produktivitas",
+    "solution": "Kami mengimplementasikan teknologi ramah lingkungan dan optimasi proses operasional",
+    "results": {
+      "emission_reduction": "45%",
+      "cost_savings": "$2.5M/year",
+      "timeline": "8 months"
+    },
+    "testimonial": "Solusi JAVAS sangat efektif dalam mengurangi emisi kami tanpa mengorbankan produksi."
+  },
+  {
+    "id": 2,
+    "title": "Waste Management System - Manufacturing",
+    "category": "Manufacturing",
+    "image": "/assets/images/portfolio/manufacturing-project.jpg",
+    "description": "Sistem manajemen limbah terintegrasi untuk pabrik manufaktur modern",
+    "challenge": "Pabrik menghasilkan limbah signifikan dengan penanganan yang tidak efisien",
+    "solution": "Implementasi sistem segregasi limbah dan recycling program komprehensif",
+    "results": {
+      "emission_reduction": "60%",
+      "cost_savings": "$1.8M/year",
+      "timeline": "6 months"
+    },
+    "testimonial": "Program manajemen limbah JAVAS meningkatkan efisiensi operasional kami secara signifikan."
+  },
+  {
+    "id": 3,
+    "title": "Sustainable Plantation Management - Agriculture",
+    "category": "Agriculture",
+    "image": "/assets/images/portfolio/agriculture-project.jpg",
+    "description": "Transformasi perkebunan tradisional menjadi operasi berkelanjutan bersertifikat",
+    "challenge": "Perkebunan perlu transisi ke praktik berkelanjutan untuk memenuhi standar pasar global",
+    "solution": "Program pelatihan dan implementasi praktik pertanian berkelanjutan",
+    "results": {
+      "emission_reduction": "35%",
+      "cost_savings": "$1.2M/year",
+      "timeline": "12 months"
+    },
+    "testimonial": "JAVAS membantu kami mencapai sertifikasi sustainability yang diperlukan pasar internasional."
+  },
+  {
+    "id": 4,
+    "title": "Energy Efficiency Optimization - Energy Sector",
+    "category": "Energy",
+    "image": "/assets/images/portfolio/energy-project.jpg",
+    "description": "Optimasi efisiensi energi untuk fasilitas pembangkit listrik",
+    "challenge": "Fasilitas energi mencari cara untuk meningkatkan efisiensi sambil mengurangi biaya operasional",
+    "solution": "Audit energi mendalam dan implementasi teknologi efisiensi energi terbaru",
+    "results": {
+      "emission_reduction": "28%",
+      "cost_savings": "$3.1M/year",
+      "timeline": "9 months"
+    },
+    "testimonial": "Program efisiensi energi JAVAS menghasilkan ROI yang mengesankan dalam 6 bulan."
+  }
+]

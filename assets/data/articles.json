@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Strategi Carbon Neutral untuk Industri Manufaktur",
+    "category": "Strategy",
+    "author": "Ahmad Rahman",
+    "date": "2024-06-15",
+    "readTime": "8 min",
+    "image": "/assets/images/blog/carbon-neutral.jpg",
+    "excerpt": "Panduan komprehensif untuk mencapai carbon neutral dalam operasi manufaktur Anda dalam 2-3 tahun.",
+    "slug": "strategi-carbon-neutral-manufaktur"
+  },
+  {
+    "id": 2,
+    "title": "Pengenalan ISO 14001: Keuntungan untuk Bisnis Anda",
+    "category": "Certification",
+    "author": "Siti Nurhaliza",
+    "date": "2024-06-10",
+    "readTime": "6 min",
+    "image": "/assets/images/blog/iso-14001.jpg",
+    "excerpt": "Pelajari manfaat sertifikasi ISO 14001 dan bagaimana implementasinya meningkatkan efisiensi bisnis.",
+    "slug": "pengenalan-iso-14001-bisnis"
+  },
+  {
+    "id": 3,
+    "title": "Teknologi Terbaru dalam Manajemen Limbah Industri",
+    "category": "Technology",
+    "author": "Eka Putri",
+    "date": "2024-06-05",
+    "readTime": "7 min",
+    "image": "/assets/images/blog/waste-management.jpg",
+    "excerpt": "Eksplorasi teknologi terkini untuk manajemen limbah yang lebih efisien dan ramah lingkungan.",
+    "slug": "teknologi-manajemen-limbah-industri"
+  },
+  {
+    "id": 4,
+    "title": "Mengintegrasikan ESG dalam Strategi Bisnis Perusahaan",
+    "category": "ESG",
+    "author": "Budi Santoso",
+    "date": "2024-05-28",
+    "readTime": "9 min",
+    "image": "/assets/images/blog/esg-strategy.jpg",
+    "excerpt": "Memahami Environmental, Social, dan Governance (ESG) untuk pertumbuhan bisnis yang berkelanjutan.",
+    "slug": "integrasi-esg-strategi-bisnis"
+  },
+  {
+    "id": 5,
+    "title": "Energi Terbarukan: Peluang dan Tantangan di Indonesia",
+    "category": "Renewable Energy",
+    "author": "Ahmad Rahman",
+    "date": "2024-05-20",
+    "readTime": "10 min",
+    "image": "/assets/images/blog/renewable-energy.jpg",
+    "excerpt": "Analisis mendalam tentang peluang energi terbarukan dan tantangan implementasinya di Indonesia.",
+    "slug": "energi-terbarukan-indonesia"
+  },
+  {
+    "id": 6,
+    "title": "Transparansi Sustainability Reporting untuk Stakeholder",
+    "category": "Reporting",
+    "author": "Eka Putri",
+    "date": "2024-05-12",
+    "readTime": "7 min",
+    "image": "/assets/images/blog/sustainability-reporting.jpg",
+    "excerpt": "Pentingnya transparansi dalam sustainability reporting untuk membangun kepercayaan stakeholder.",
+    "slug": "transparansi-sustainability-reporting"
+  }
+]
