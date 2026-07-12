@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio dan Case Studies - JAVAS KONSULTAN">
+    <meta name="keywords" content="case studies, portfolio, project showcase, success stories">
+    <meta property="og:title" content="Portofolio - JAVAS KONSULTAN">
+    <meta property="og:description" content="Lihat proyek-proyek sukses kami di berbagai industri">
+    <link rel="canonical" href="https://javasindo-ai.github.io/portfolio.html">
+    <title>Portofolio - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter */
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #EEEEEE;
+            background: white;
+            color: #212121;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #1B5E20;
+            background: #1B5E20;
+            color: white;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .portfolio-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .portfolio-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.3s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image::after {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-content {
+            padding: 24px;
+        }
+
+        .portfolio-category {
+            color: #4CAF50;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card h3 {
+            color: #212121;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .portfolio-card p {
+            color: #757575;
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .portfolio-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #EEEEEE;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-value {
+            color: #1B5E20;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .result-label {
+            color: #757575;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        .portfolio-link {
+            color: #1B5E20;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            gap: 12px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #757575;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #1B5E20;
+        }
+
+        .modal-header {
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .modal-category {
+            color: #4CAF50;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .modal-title {
+            color: #1B5E20;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .modal-body p {
+            color: #757575;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .modal-section {
+            margin-bottom: 24px;
+        }
+
+        .modal-section h4 {
+            color: #1B5E20;
+            margin-bottom: 12px;
+        }
+
+        .modal-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            background: #F1F8F4;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .modal-result-item {
+            text-align: center;
+        }
+
+        .modal-result-value {
+            color: #1B5E20;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .modal-result-label {
+            color: #757575;
+            font-size: 13px;
+        }
+
+        .modal-testimonial {
+            background: #FAFAFA;
+            border-left: 4px solid #4CAF50;
+            padding: 16px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #757575;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 60px 16px;
+            }
+
+            .modal-content {
+                padding: 24px;
+                width: 95%;
+            }
+
+            .modal-results {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html" class="active">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Portofolio</span>
+            </div>
+            <h1>Portofolio Kami</h1>
+            <p>Jelajahi proyek-proyek sukses kami di berbagai industri dan lihat bagaimana kami membantu klien mencapai target keberlanjutan mereka</p>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+                <button class="filter-btn" data-filter="Mining">Mining</button>
+                <button class="filter-btn" data-filter="Manufacturing">Manufacturing</button>
+                <button class="filter-btn" data-filter="Agriculture">Agriculture</button>
+                <button class="filter-btn" data-filter="Energy">Energy</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioContainer">
+                <!-- Portfolio items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container" style="margin-bottom: 64px;">
+        <div style="background: linear-gradient(135deg, #1B5E20 0%, #4CAF50 100%); color: white; text-align: center; padding: 80px 24px; border-radius: 20px;" data-aos="zoom-in">
+            <h2 style="color: white; margin-bottom: 16px;">Ingin Melihat Hasil Serupa untuk Bisnis Anda?</h2>
+            <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 32px;">Hubungi tim kami untuk mendiskusikan bagaimana kami dapat membantu bisnis Anda mencapai target keberlanjutan.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/contact.html" style="background-color: white; color: #1B5E20; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 14px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='transparent'; this.style.color='white'; this.style.borderColor='white'; this.style.border='2px solid white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#1B5E20'; this.style.border='none';">Konsultasi Gratis</a>
+                <a href="/services.html" style="border: 2px solid white; color: white; padding: 10px 30px; border-radius: 8px; text-decoration: none; font-weight: 500; font-size: 14px; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='white'; this.style.color='#1B5E20';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';">Lihat Layanan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html">Semua Layanan</a></li>
+                    <li><a href="/services.html">Compliance Management</a></li>
+                    <li><a href="/services.html">Environmental Strategy</a></li>
+                    <li><a href="/services.html">Training & Awareness</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        let allPortfolio = [];
+
+        // Load Portfolio
+        fetch('/assets/data/portfolio.json')
+            .then(response => response.json())
+            .then(portfolio => {
+                allPortfolio = portfolio;
+                renderPortfolio('all');
+            });
+
+        function renderPortfolio(category) {
+            const container = document.getElementById('portfolioContainer');
+            let filtered = allPortfolio;
+
+            if (category !== 'all') {
+                filtered = allPortfolio.filter(item => item.category === category);
+            }
+
+            container.innerHTML = filtered.map((item, index) => `
+                <div class="portfolio-card" data-aos="fade-up" data-aos-delay="${index * 100}" onclick="openModal(${item.id})">
+                    <div class="portfolio-image"><i class="fas fa-briefcase"></i></div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">${item.category}</div>
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                        <div class="portfolio-results">
+                            <div class="result-item">
+                                <div class="result-value">${item.results.emission_reduction}</div>
+                                <div class="result-label">Emisi ↓</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">${item.results.cost_savings}</div>
+                                <div class="result-label">Savings</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-value">${item.results.timeline}</div>
+                                <div class="result-label">Timeline</div>
+                            </div>
+                        </div>
+                        <a href="#" class="portfolio-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            `).join('');
+            AOS.refresh();
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderPortfolio(btn.getAttribute('data-filter'));
+            });
+        });
+
+        function openModal(projectId) {
+            const project = allPortfolio.find(p => p.id === projectId);
+            if (!project) return;
+
+            const html = `
+                <div class="modal active" onclick="if(event.target===this) closeModal()">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+                        <div class="modal-header">
+                            <div class="modal-category">${project.category}</div>
+                            <h2 class="modal-title">${project.title}</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-section">
+                                <h4>Deskripsi Proyek</h4>
+                                <p>${project.description}</p>
+                            </div>
+                            <div class="modal-section">
+                                <h4>Tantangan</h4>
+                                <p>${project.challenge}</p>
+                            </div>
+                            <div class="modal-section">
+                                <h4>Solusi yang Diterapkan</h4>
+                                <p>${project.solution}</p>
+                            </div>
+                            <div class="modal-section">
+                                <h4>Hasil & Impact</h4>
+                                <div class="modal-results">
+                                    <div class="modal-result-item">
+                                        <div class="modal-result-value">${project.results.emission_reduction}</div>
+                                        <div class="modal-result-label">Pengurangan Emisi</div>
+                                    </div>
+                                    <div class="modal-result-item">
+                                        <div class="modal-result-value">${project.results.cost_savings}</div>
+                                        <div class="modal-result-label">Penghematan Biaya</div>
+                                    </div>
+                                    <div class="modal-result-item">
+                                        <div class="modal-result-value">${project.results.timeline}</div>
+                                        <div class="modal-result-label">Durasi Proyek</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-section">
+                                <h4>Testimonial Klien</h4>
+                                <p class="modal-testimonial">"${project.testimonial}"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.body.insertAdjacentHTML('beforeend', html);
+        }
+
+        function closeModal() {
+            const modal = document.querySelector('.modal');
+            if (modal) modal.remove();
+        }
+    </script>
+</body>
+</html>
