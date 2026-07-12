@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan Konsultasi Lingkungan - JAVAS KONSULTAN">
+    <meta name="keywords" content="layanan konsultasi, audit lingkungan, compliance, sustainability">
+    <meta property="og:title" content="Layanan Kami - JAVAS KONSULTAN">
+    <meta property="og:description" content="Jelajahi semua layanan konsultasi lingkungan kami">
+    <link rel="canonical" href="https://javasindo-ai.github.io/services.html">
+    <title>Layanan - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-detailed-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .service-detail-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .service-detail-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            border-color: #4CAF50;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .service-icon-large {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .service-detail-card h3 {
+            color: #1B5E20;
+            margin-bottom: 8px;
+        }
+
+        .service-detail-card .service-category {
+            color: #4CAF50;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .service-detail-card p {
+            color: #757575;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .service-benefits {
+            background: #F1F8F4;
+            border-left: 4px solid #1B5E20;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+
+        .service-benefits h5 {
+            color: #1B5E20;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .service-benefits ul {
+            list-style: none;
+        }
+
+        .service-benefits li {
+            color: #757575;
+            font-size: 13px;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .service-benefits li:before {
+            content: '✓';
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            padding: 64px 24px;
+            margin-bottom: 64px;
+            border-radius: 20px;
+        }
+
+        .methodology .section-header {
+            margin-bottom: 48px;
+        }
+
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .methodology-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1B5E20 0%, #4CAF50 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+
+        .methodology-step h4 {
+            color: #212121;
+            margin-bottom: 12px;
+        }
+
+        .methodology-step p {
+            color: #757575;
+            font-size: 13px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 64px;
+        }
+
+        .accordion-item {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header {
+            padding: 24px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #F1F8F4;
+        }
+
+        .accordion-header h5 {
+            color: #212121;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .accordion-toggle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-left: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .accordion-content p {
+            color: #757575;
+            line-height: 1.8;
+            padding: 16px 0;
+            margin: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            padding-bottom: 24px;
+        }
+
+        /* CTA */
+        .services-cta {
+            background: linear-gradient(135deg, #1B5E20 0%, #4CAF50 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 24px;
+            border-radius: 20px;
+            margin: 64px auto;
+        }
+
+        .services-cta h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .services-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 1024px) {
+            .services-detailed-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .methodology-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .methodology-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 16px;
+            }
+
+            .services-detailed-grid {
+                gap: 16px;
+            }
+
+            .service-detail-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html" class="active">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Layanan</span>
+            </div>
+            <h1>Layanan Kami</h1>
+            <p>Solusi komprehensif untuk semua kebutuhan konsultasi lingkungan dan keberlanjutan bisnis Anda</p>
+        </div>
+    </section>
+
+    <!-- Services Detailed -->
+    <section class="section">
+        <div class="container">
+            <div class="services-detailed-grid" id="servicesDetailedContainer">
+                <!-- Services will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <h2>Metodologi Kami</h2>
+                <div class="divider"></div>
+                <p>Kami mengikuti pendekatan terstruktur dan proven untuk memastikan kesuksesan setiap proyek</p>
+            </div>
+            <div class="methodology-steps">
+                <div class="methodology-step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number">1</div>
+                    <h4>Assessment</h4>
+                    <p>Evaluasi menyeluruh terhadap kondisi saat ini dan identifikasi peluang</p>
+                </div>
+                <div class="methodology-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <h4>Planning</h4>
+                    <p>Pengembangan strategi dan roadmap implementasi yang jelas</p>
+                </div>
+                <div class="methodology-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <h4>Implementation</h4>
+                    <p>Eksekusi program dengan monitoring berkala dan adjustment</p>
+                </div>
+                <div class="methodology-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <h4>Optimization</h4>
+                    <p>Continuous improvement dan optimasi untuk hasil maksimal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan Umum</h2>
+                <div class="divider"></div>
+                <p>Jawaban untuk pertanyaan-pertanyaan yang sering diajukan tentang layanan kami</p>
+            </div>
+            <div class="faq-section">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Berapa lama waktu yang dibutuhkan untuk melihat hasil dari program keberlanjutan?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Waktu untuk melihat hasil tergantung pada skala dan kompleksitas proyek Anda. Umumnya, hasil awal dapat terlihat dalam 3-6 bulan, sementara transformasi penuh memerlukan 1-2 tahun. Kami akan memberikan timeline yang jelas untuk setiap proyek.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Apakah layanan Anda cocok untuk UKM atau hanya untuk perusahaan besar?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Layanan kami dapat disesuaikan untuk perusahaan dari semua ukuran, mulai dari startup hingga korporasi besar. Kami memahami tantangan unik setiap skala bisnis dan menyediakan solusi yang cost-effective dan praktis.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Bagaimana cara Anda mengukur kesuksesan program?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Kami menetapkan KPI yang jelas di awal proyek dan melakukan monitoring rutin. Metrik kesuksesan mencakup pengurangan emisi, efisiensi biaya, compliance, dan kepuasan stakeholder. Laporan progress diberikan secara berkala.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Apakah Anda membantu dengan compliance regulasi terbaru?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Ya, kami secara aktif memonitor perubahan regulasi lingkungan dan memastikan klien kami selalu compliant dengan persyaratan terbaru. Tim kami termasuk legal advisors dan compliance specialists.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Berapa investasi yang diperlukan untuk mulai program keberlanjutan?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Investasi bervariasi tergantung pada skala operasi dan target keberlanjutan Anda. Kami menawarkan paket dari konsultasi dasar hingga implementasi penuh. Hubungi kami untuk mendiskusikan budget dan expected ROI untuk bisnis Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container">
+        <div class="services-cta" data-aos="zoom-in">
+            <h2>Siap untuk Transformasi Lingkungan?</h2>
+            <p>Mulai perjalanan keberlanjutan Anda bersama kami. Tim kami siap membantu Anda mencapai target lingkungan dan mengoptimalkan efisiensi operasional.</p>
+            <div class="cta-buttons">
+                <a href="/contact.html" class="btn btn-white">Konsultasi Gratis</a>
+                <a href="/portfolio.html" class="btn btn-outline">Lihat Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#audit">Audit Lingkungan</a></li>
+                    <li><a href="#compliance">Compliance Management</a></li>
+                    <li><a href="#strategy">Environmental Strategy</a></li>
+                    <li><a href="#implementation">System Implementation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Load Services
+        fetch('/assets/data/services.json')
+            .then(response => response.json())
+            .then(services => {
+                const container = document.getElementById('servicesDetailedContainer');
+                container.innerHTML = services.map((service, index) => `
+                    <div class="service-detail-card" id="service-${service.id}" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="service-header">
+                            <div class="service-icon-large">
+                                <i class="fas fa-${service.icon}"></i>
+                            </div>
+                            <div>
+                                <div class="service-category">Layanan</div>
+                                <h3>${service.title}</h3>
+                            </div>
+                        </div>
+                        <p>${service.details}</p>
+                        <div class="service-benefits">
+                            <h5>Manfaat Layanan:</h5>
+                            <ul>
+                                ${service.benefits.map(benefit => `<li>${benefit}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `).join('');
+                AOS.refresh();
+            });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                // Close other items
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
