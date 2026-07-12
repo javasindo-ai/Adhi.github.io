@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi JAVAS KONSULTAN - Konsultasi Gratis Lingkungan">
+    <meta name="keywords" content="hubungi kami, contact, konsultasi, request">
+    <meta property="og:title" content="Kontak - JAVAS KONSULTAN">
+    <meta property="og:description" content="Hubungi kami untuk konsultasi gratis tentang solusi lingkungan">
+    <link rel="canonical" href="https://javasindo-ai.github.io/contact.html">
+    <title>Kontak - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 64px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #212121;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #EEEEEE;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1B5E20;
+            box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: #f44336;
+        }
+
+        .error-message {
+            color: #f44336;
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        .success-message {
+            background: #4CAF50;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .form-submit {
+            background: #1B5E20;
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-submit:hover {
+            background: #164620;
+            box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            color: #212121;
+            margin-bottom: 8px;
+        }
+
+        .contact-item p {
+            color: #757575;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: #1B5E20;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+        }
+
+        /* FAQ */
+        .contact-faq {
+            margin-bottom: 64px;
+        }
+
+        .accordion-item {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header {
+            padding: 24px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #F1F8F4;
+        }
+
+        .accordion-header h5 {
+            color: #212121;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .accordion-toggle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            margin-left: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .accordion-content p {
+            color: #757575;
+            line-height: 1.8;
+            padding: 16px 0;
+            margin: 0;
+        }
+
+        .accordion-item.active .accordion-content {
+            padding-bottom: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 60px 16px;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+
+            .map-placeholder {
+                height: 250px;
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Kontak</span>
+            </div>
+            <h1>Hubungi Kami</h1>
+            <p>Ada pertanyaan tentang layanan kami? Kami siap membantu Anda mencapai target keberlanjutan bisnis</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form" data-aos="fade-right">
+                    <h3 style="color: #1B5E20; margin-bottom: 24px;">Kirim Pesan</h3>
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i> Pesan Anda telah terkirim! Kami akan menghubungi Anda segera.
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap *</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message">Nama wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message">Email tidak valid</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Nama Perusahaan</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Layanan yang Diminati *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Pilih layanan...</option>
+                                <option value="audit">Audit Lingkungan</option>
+                                <option value="compliance">Compliance Management</option>
+                                <option value="strategy">Environmental Strategy</option>
+                                <option value="implementation">System Implementation</option>
+                                <option value="training">Training & Awareness</option>
+                                <option value="monitoring">Monitoring & Reporting</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                            <div class="error-message">Pilih layanan yang diminati</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan *</label>
+                            <textarea id="message" name="message" required placeholder="Jelaskan kebutuhan Anda..."></textarea>
+                            <div class="error-message">Pesan wajib diisi</div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <label for="agreement">Saya setuju dengan Kebijakan Privasi dan syarat layanan</label>
+                        </div>
+
+                        <button type="submit" class="form-submit">Kirim Pesan</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-left">
+                    <h3 style="color: #1B5E20; margin-bottom: 8px;">Informasi Kontak</h3>
+                    <p style="color: #757575; margin-bottom: 32px;">Hubungi kami melalui berbagai channel berikut</p>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Lokasi</h4>
+                            <p>Jl. Sudirman No. 123<br>Jakarta Selatan 12190<br>Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p><a href="tel:+6221XXXXXXX">+62 21 XXXX XXXX</a></p>
+                            <p><a href="tel:+6281XXXXXXX">+62 81 XXXX XXXX</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@javas.co.id">info@javas.co.id</a></p>
+                            <p><a href="mailto:konsultasi@javas.co.id">konsultasi@javas.co.id</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Jam Kerja</h4>
+                            <p>Senin - Jumat: 08:00 - 17:00<br>Sabtu: 09:00 - 13:00<br>Minggu: Tutup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="map-section">
+                <h3 style="color: #1B5E20; margin-bottom: 24px;">Lokasi Kami</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-map"></i>
+                </div>
+                <p style="color: #757575; margin-top: 20px;">Kantor pusat kami berlokasi di pusat bisnis Jakarta dengan akses mudah dari berbagai transportasi umum</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pertanyaan Umum</h2>
+                <div class="divider"></div>
+                <p>Jawaban untuk pertanyaan yang sering diajukan seputar proses konsultasi kami</p>
+            </div>
+            <div class="contact-faq">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Berapa biaya untuk konsultasi awal?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Konsultasi awal kami bersifat gratis tanpa komitmen apapun. Tim kami akan mendengarkan kebutuhan Anda dan memberikan rekomendasi awal.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Berapa lama waktu respons Anda?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Kami berusaha merespons setiap pertanyaan dalam waktu maksimal 24 jam kerja. Untuk urgent matters, hubungi kami langsung melalui telepon.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Apakah Anda melayani klien di luar Jakarta?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Ya, kami melayani klien di seluruh Indonesia dan Asia Tenggara. Untuk lokasi di luar Jakarta, kami dapat mengadakan meeting virtual atau kunjungan on-site sesuai kebutuhan.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h5>Bagaimana proses penawaran harga?</h5>
+                        <div class="accordion-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Setelah konsultasi awal dan pemahaman kebutuhan, kami akan membuat proposal detail dengan estimasi biaya, timeline, dan deliverables yang jelas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html">Semua Layanan</a></li>
+                    <li><a href="/services.html">Compliance Management</a></li>
+                    <li><a href="/services.html">Environmental Strategy</a></li>
+                    <li><a href="/services.html">Training & Awareness</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/form-handler.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Form Handler
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleContactSubmit);
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            let isValid = true;
+            const fields = contactForm.querySelectorAll('[required]');
+            fields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.closest('.form-group').classList.add('error');
+                } else {
+                    field.closest('.form-group').classList.remove('error');
+                }
+            });
+
+            if (!isValid) return;
+
+            // Show success message
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+        }
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            header.addEventListener('click', () => {
+                // Close other items
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
