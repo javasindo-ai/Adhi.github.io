@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artikel dan Insights - JAVAS KONSULTAN">
+    <meta name="keywords" content="artikel, blog, insights, environmental news, sustainability">
+    <meta property="og:title" content="Artikel - JAVAS KONSULTAN">
+    <meta property="og:description" content="Baca artikel dan insights terbaru tentang keberlanjutan dan lingkungan">
+    <link rel="canonical" href="https://javasindo-ai.github.io/articles.html">
+    <title>Artikel - JAVAS KONSULTAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #1B5E20;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #757575;
+        }
+
+        .page-header {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: #1B5E20;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            color: #757575;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Featured Article */
+        .featured-article {
+            background: linear-gradient(135deg, #1B5E20 0%, #2D6A4F 100%);
+            color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-bottom: 64px;
+            transition: all 0.3s ease;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 16px;
+        }
+
+        .featured-content h2 {
+            color: white;
+            margin-bottom: 16px;
+            font-size: 28px;
+        }
+
+        .featured-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .featured-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .featured-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Filter */
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #EEEEEE;
+            background: white;
+            color: #212121;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #1B5E20;
+            background: #1B5E20;
+            color: white;
+        }
+
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid #EEEEEE;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #4CAF50 0%, #1B5E20 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .article-content {
+            padding: 24px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #F1F8F4;
+            color: #1B5E20;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .article-card h3 {
+            color: #212121;
+            margin-bottom: 8px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #757575;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: #999999;
+            padding-top: 16px;
+            border-top: 1px solid #EEEEEE;
+            margin-top: 16px;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #1B5E20;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            margin-top: 12px;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 64px;
+            flex-wrap: wrap;
+        }
+
+        .pagination a,
+        .pagination span {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #EEEEEE;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #212121;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pagination a:hover {
+            border-color: #1B5E20;
+            color: #1B5E20;
+        }
+
+        .pagination .active {
+            background: #1B5E20;
+            color: white;
+            border-color: #1B5E20;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: linear-gradient(135deg, #f5f5f5 0%, #FAFAFA 100%);
+            padding: 64px 24px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .newsletter-section h3 {
+            color: #1B5E20;
+            margin-bottom: 8px;
+        }
+
+        .newsletter-section p {
+            color: #757575;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 16px;
+            border: 2px solid #EEEEEE;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: #1B5E20;
+        }
+
+        .newsletter-form button {
+            padding: 12px 32px;
+            background: #1B5E20;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .newsletter-form button:hover {
+            background: #164620;
+        }
+
+        @media (max-width: 1024px) {
+            .featured-article {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 16px;
+            }
+
+            .featured-image {
+                font-size: 48px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>JAVAS</span>
+            </a>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/about.html">Tentang Kami</a></li>
+                <li><a href="/services.html">Layanan</a></li>
+                <li><a href="/portfolio.html">Portofolio</a></li>
+                <li><a href="/articles.html" class="active">Artikel</a></li>
+                <li><a href="/career.html">Karier</a></li>
+                <li><a href="/contact.html" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Beranda</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span>Artikel</span>
+            </div>
+            <h1>Insights & Artikel</h1>
+            <p>Baca artikel dan insights terbaru tentang keberlanjutan, environmental management, dan best practices dalam bisnis berkelanjutan</p>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-article" data-aos="fade-up" id="featuredArticle">
+                <!-- Featured article will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua Kategori</button>
+                <button class="filter-btn" data-filter="Strategy">Strategy</button>
+                <button class="filter-btn" data-filter="Certification">Certification</button>
+                <button class="filter-btn" data-filter="Technology">Technology</button>
+                <button class="filter-btn" data-filter="ESG">ESG</button>
+                <button class="filter-btn" data-filter="Renewable Energy">Renewable Energy</button>
+                <button class="filter-btn" data-filter="Reporting">Reporting</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="articles-grid" id="articlesContainer">
+                <!-- Articles will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="newsletter-section">
+                <h3>Berlangganan Newsletter Kami</h3>
+                <p>Dapatkan insights dan update terbaru tentang keberlanjutan langsung ke inbox Anda</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Email Anda" required>
+                    <button type="submit">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Tentang Kami</h4>
+                <p style="color: #bdbdbd; font-size: 14px; line-height: 1.8;">CV. JAVAS INDONESIA KONSULTAN adalah perusahaan konsultasi lingkungan terkemuka yang berkomitmen pada keberlanjutan bisnis.</p>
+                <div class="social-icons">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="/services.html">Semua Layanan</a></li>
+                    <li><a href="/services.html">Compliance Management</a></li>
+                    <li><a href="/services.html">Environmental Strategy</a></li>
+                    <li><a href="/services.html">Training & Awareness</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/articles.html">Artikel & Blog</a></li>
+                    <li><a href="/portfolio.html">Case Studies</a></li>
+                    <li><a href="/about.html">Tentang Tim</a></li>
+                    <li><a href="/career.html">Karier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:info@javas.co.id">info@javas.co.id</a></li>
+                    <li><a href="tel:+62XXXXXXXXXX">+62 XXX XXXX XXXX</a></li>
+                    <li>Jakarta, Indonesia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CV. JAVAS INDONESIA KONSULTAN. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        let allArticles = [];
+
+        // Load Articles
+        fetch('/assets/data/articles.json')
+            .then(response => response.json())
+            .then(articles => {
+                allArticles = articles;
+                renderFeaturedArticle();
+                renderArticles('all');
+            });
+
+        function renderFeaturedArticle() {
+            const featured = allArticles[0];
+            const container = document.getElementById('featuredArticle');
+            container.innerHTML = `
+                <div class="featured-image"><i class="fas fa-newspaper"></i></div>
+                <div class="featured-content">
+                    <div class="featured-badge">${featured.category}</div>
+                    <h2>${featured.title}</h2>
+                    <p>${featured.excerpt}</p>
+                    <div class="featured-meta">
+                        <span><i class="fas fa-calendar"></i> ${featured.date}</span>
+                        <span><i class="fas fa-clock"></i> ${featured.readTime}</span>
+                        <span><i class="fas fa-user"></i> ${featured.author}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderArticles(category) {
+            const container = document.getElementById('articlesContainer');
+            let filtered = allArticles;
+
+            if (category !== 'all') {
+                filtered = allArticles.filter(article => article.category === category);
+            }
+
+            container.innerHTML = filtered.map((article, index) => `
+                <div class="article-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                    <div class="article-image"><i class="fas fa-book"></i></div>
+                    <div class="article-content">
+                        <span class="article-category">${article.category}</span>
+                        <h3>${article.title}</h3>
+                        <p class="article-excerpt">${article.excerpt}</p>
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> ${article.date}</span>
+                            <span><i class="fas fa-clock"></i> ${article.readTime}</span>
+                        </div>
+                        <a href="#" class="read-more">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+            `).join('');
+            AOS.refresh();
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderArticles(btn.getAttribute('data-filter'));
+            });
+        });
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Terima kasih! Newsletter akan dikirim ke ${email}`);
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
